@@ -4,7 +4,7 @@ spring:
   #      host: 127.0.0.1
   #      port: 6379
   datasource:
-    url: jdbc:mysql://testdb.ctiouycy2jfy.ap-northeast-2.rds.amazonaws.com:13306/nextpick
+    url: ${AWS_RDS_URL}
     username: admin
     password: mt4355cu
     driver-class-name: com.mysql.cj.jdbc.Driver
