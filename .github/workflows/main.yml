@@ -52,6 +52,6 @@ jobs:
               'fi',
               'sudo docker pull jungmin2056/next-pick:${GITHUB_SHA::7}',
               'sudo docker tag jungmin2056/next-pick:${GITHUB_SHA::7} next-pick',
-              'sudo docker run -d --name server -p 8080:8080 next-pick'
+              'sudo docker run -d --name server -p 8080:8080 -e SPRING_PROFILES_ACTIVE=default next-pick'
             ]" \
             --output text
