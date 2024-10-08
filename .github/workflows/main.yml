@@ -53,6 +53,9 @@ jobs:
               'sudo docker pull jungmin2056/next-pick:${GITHUB_SHA::7}',
               'sudo docker tag jungmin2056/next-pick:${GITHUB_SHA::7} next-pick',
               'sudo docker run -d --name server -p 8080:8080 \\
-          -e AWS_RDS_URL=${{ secrets.AWS_RDS_URL }} next-pick'
+          -e AWS_RDS_URL=${{ secrets.AWS_RDS_URL }} \\
+          -e AWS_RDS_UN=${{ secrets.AWS_RDS_UN }} \\
+          -e AWS_RDS_PW=${{ secrets.AWS_RDS_PW }} \\
+          next-pick'
             ]" \
             --output text
