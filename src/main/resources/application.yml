@@ -4,7 +4,7 @@ spring:
   #      host: 127.0.0.1
   #      port: 6379
   datasource:
-    url: ${AWS_RDS_URL}
+    url: ${{ secrets.AWS_RDS_URL }}
     username: admin
     password: mt4355cu
     driver-class-name: com.mysql.cj.jdbc.Driver
